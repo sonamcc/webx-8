@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="filters/bookFilter.js"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body ng-app="myApp" ng-controller="BookController">
+
+    <div class="container">
+        <h2>📖 Search Books</h2>
+
+        <input type="text" placeholder="Search by Title, Author, or Genre" ng-model="searchText">
+
+        <div class="book-list">
+            <div class="book-item" ng-repeat="book in books | bookFilter:searchText">
+                <p class="book-title">{{ book.title }}</p>
+                <p class="book-author">{{ book.author }} ({{ book.genre }})</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

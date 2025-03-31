@@ -1,0 +1,175 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #121212; /* Dark Background */
+    color: white;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Centered Container */
+.container {
+    background: rgba(255, 20, 147, 0.2); /* Pink Glass Effect */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(255, 20, 147, 0.5);
+    width: 60%;
+    max-width: 700px;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease-in-out;
+    margin: 40px auto; /* Centering */
+}
+
+/* Title */
+h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #ff1493; /* Hot Pink */
+    text-shadow: 2px 2px 10px rgba(255, 20, 147, 0.7);
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    background: #ff1493;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(255, 20, 147, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: white;
+    color: #ff1493;
+    transform: translateY(-4px);
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 18px;
+    margin: 20px 0;
+    border: 2px solid #ff1493;
+    border-radius: 10px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: white;
+    outline: none;
+    background: rgba(255, 20, 147, 0.3);
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 18px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: white;
+    color: #ff1493;
+}
+
+/* Message Styling */
+.message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ff1493;
+}
+
+/* Book Section */
+.book-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.book-card {
+    background: rgba(255, 20, 147, 0.2);
+    color: white;
+    padding: 30px;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(255, 20, 147, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-card:hover {
+    transform: scale(1.08);
+    background: rgba(255, 20, 147, 0.3);
+}
+
+.book-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff1493;
+    margin-bottom: 12px;
+}
+
+.book-author {
+    font-size: 20px;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.book-genre {
+    font-size: 18px;
+    color: #ff1493;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .container {
+        width: 80%;
+    }
+
+    .book-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 20px;
+        padding: 12px 25px;
+    }
+}

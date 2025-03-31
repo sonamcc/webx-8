@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="services/authService.js"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body ng-app="myApp" ng-controller="AuthController">
+
+    <div class="container">
+        <h2>Login</h2>
+
+        <input type="text" placeholder="Username" ng-model="user.username">
+        <input type="password" placeholder="Password" ng-model="user.password">
+
+        <button ng-click="login()">Login</button>
+
+        <p class="message">{{ message }}</p>
+    </div>
+
+</body>
+</html>
